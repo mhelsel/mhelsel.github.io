@@ -10,6 +10,7 @@
 		font-size: 4vh;
 		margin-top: 0.5vh;
 		position: fixed;
+		text-align: center;
 	}
 	.slide {
 		width: 100vw;
@@ -20,6 +21,24 @@
 		flex-direction: row;
 		width: 400vw;
 		padding-top: 8vh;
+
+		transform: rotate(90deg) translateY(-100vh);
+		transform-origin: top left;
+	}
+	.outer-wrapper {
+		width: 100vh;
+		height: 100vw;
+		transform: rotate(-90deg) translateX(-100vh);
+		transform-origin: top left;
+		overflow-y: scroll;
+		overflow-x: hidden;
+		position: absolute;
+
+		scrollbar-width:none;
+		-ms-overflow-style: none;
+	}
+	::-webkit-scrollbar{
+		display: none;
 	}
 	.one {
 		background: #FA8A6C;
@@ -35,7 +54,10 @@
 	}
 	.back {
 		font-size: 3vh;
+
 		position: fixed;
+		bottom:0;
+		padding-bottom: 3vh;
 	}
 </style>
 
