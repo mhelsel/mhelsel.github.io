@@ -9,8 +9,9 @@
 		color: #FA8A6C;
 		font-size: 4vh;
 		margin-top: 0.5vh;
+		margin-left: 40%;
 		position: fixed;
-		text-align: center;
+
 	}
 	.slide {
 		width: 100vw;
@@ -57,7 +58,16 @@
 
 		position: fixed;
 		bottom:0;
-		padding-bottom: 3vh;
+		padding-bottom: 4vh;
+		margin-left: 25%;
+	}
+	.beginning {
+		font-size: 3vh;
+
+		position: fixed;
+		bottom:0;
+		padding-bottom: 4vh;
+		margin-left: 65%;
 	}
 </style>
 
@@ -68,7 +78,7 @@
 	<h1>Some fun links! </h1>
 	<div class="outer-wrapper"> 
 		<div class="wrapper"> 
-			<div class="slide one">
+			<div class="slide one" id="beginning">
 				<a href="https://ptable.com/#Properties" target="_blank">Periodic Table</a>
 			 </div>
 			<div class="slide two">
@@ -85,5 +95,7 @@
 
 
 	</div>
+
 	<a href="index.html" class="back">Back</a>
+	<a href="#beginning" class="beginning">Beginning</a>
 </body>
