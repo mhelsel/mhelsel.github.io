@@ -1,0 +1,136 @@
+body {
+	background-color: rgba(108, 250, 241, 0.15);
+	font-family: "Patrick Hand", monospace;
+}
+nav {
+	position: fixed;
+	display: flex;
+	justify-content: space-around;
+	width: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
+	padding: .5vw;
+}
+a {
+	color: #FA8A6C;
+	text-decoration: none;
+}
+a:hover {
+	color: #FA6B6B;
+	text-decoration: none;
+	transform: scale(1.5);
+	font-weight: bold;
+
+}
+#top {
+	color: #FA8A6C;
+	padding-top: 60px;
+	font-size: 75px;
+}
+.heart {
+	position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 200px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #FA8A6C;
+    height: 50px;
+    width: 50px;
+    transform: rotate(-45deg);
+    animation-name: heart;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+.heart::after {
+	background-color: #FA8A6C;
+	content: "";
+	border-radius: 50%;
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	top: 0px;
+	left: 25px;
+}
+.heart::before {
+	content: "";
+   	background-color: #FA8A6C;
+   	border-radius: 50%;
+   	position: absolute;
+   	width: 50px;
+	height: 50px;
+	top: -25px;
+	left: 0px;
+} 
+@keyframes heart {
+ 	50% {
+ 		transform: scale(1.2)
+ 		rotate(-45deg);
+ 	}
+}
+#links {
+	color: #FA8A6C;
+	font-size: 4vh;
+	margin-top: 0.5vh;
+	margin-left: 40%;
+	position: fixed;
+}
+.slide {
+	width: 100vw;
+	height: 80vh;
+}
+.wrapper {
+	display: flex;
+	flex-direction: row;
+	width: 400vw;
+	padding-top: 8vh;
+	transform: rotate(90deg) translateY(-100vh);
+	transform-origin: top left;
+}
+.wrapper a {
+	text-decoration: none;
+	color: rgba(108, 250, 241, 0.15);
+}
+.outer-wrapper {
+	width: 100vh;
+	height: 100vw;
+	transform: rotate(-90deg) translateX(-100vh);
+	transform-origin: top left;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	position: absolute;
+	scrollbar-width:none;
+	-ms-overflow-style: none;
+}
+::-webkit-scrollbar{
+	display: none;
+}
+.one {
+	background: #FA8A6C;
+}
+.two {
+	background: #fb9e84;
+}
+.three {
+	background: #fbb19d;
+}
+.four {
+	background: #fcc5b5;
+}
+.back {
+	font-size: 3vh;
+	position: fixed;
+	bottom:0;
+	padding-bottom: 4vh;
+	margin-left: 25%;
+}
+.beginning {
+	font-size: 3vh;
+	position: fixed;
+	bottom:0;
+	padding-bottom: 4vh;
+	margin-left: 65%;
+}

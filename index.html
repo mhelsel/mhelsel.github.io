@@ -6,81 +6,7 @@
 	<title> My Page! </title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
-	<style>
-		body {
-			background-color: rgba(108, 250, 241, 0.15);
-			font-family: "Patrick Hand", monospace;
-		}
-		nav {
-			position: fixed;
-			display: flex;
-			justify-content: space-around;
-			width: 100%;
-			top: 0;
-			left: 0;
-			right: 0;
-			padding: .5vw;
-		}
-		a {
-			color: #FA8A6C;
-			text-decoration: none;
-		}
-		a:hover {
-			color: #FA6B6B;
-			text-decoration: none;
-			transform: scale(1.5);
-			font-weight: bold;
-
-		}
-		h1 {
-			color: #FA8A6C;
-			padding-top: 60px;
-			font-size: 75px;
-		}
-		.heart {
-			position: absolute;
-    		margin-left: auto;
-    		margin-right: auto;
-    		margin-top: 200px;
-    		top: 0;
-    		right: 0;
-    		bottom: 0;
-    		left: 0;
-    		background-color: #FA8A6C;
-    		height: 50px;
-    		width: 50px;
-    		transform: rotate(-45deg);
-    		animation-name: heart;
-    		animation-duration: 2s;
-    		animation-iteration-count: infinite;
-		}
-		.heart::after {
-    		background-color: #FA8A6C;
-    		content: "";
-    		border-radius: 50%;
-    		position: absolute;
-    		width: 50px;
-    		height: 50px;
-    		top: 0px;
-    		left: 25px;
-  		}
-    	.heart::before {
-    		content: "";
-    		background-color: #FA8A6C;
-    		border-radius: 50%;
-    		position: absolute;
-    		width: 50px;
-    		height: 50px;
-    		top: -25px;
-    		left: 0px;
-  		} 
-		@keyframes heart {
-  			50% {
-  				transform: scale(1.2)
-  				rotate(-45deg);
-  			}
-  		}
-	</style>
+	<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -91,8 +17,5 @@
 	</nav>
 		<h1 id="top" class="text-center">Madison's Webpage </h1>
 	<div class="heart"></div>
-
-
-
 </body>
 </html>
