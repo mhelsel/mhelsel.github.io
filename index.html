@@ -13,20 +13,41 @@
 	<link href="https://fonts.googleapis.com/css2?family=ABeeZee&display=swap" rel="stylesheet">
 
 	<link rel="stylesheet" href="css/style.css">
+
+	<img src="img/cursor_img.png" alt="Cursor" id="cursor" height="35px"/>
+	<script>
+		function move(event) {
+			var x = event.clientX;
+			var y = event.clientY;
+			var cursorImg = document.getElementById("cursor");
+
+			if (y <= 10) {
+				cursorImg.style.display = "none";
+			}
+			else {
+				cursorImg.style.display = "block";
+				cursorImg.style.left = (x + 10) + 'px';
+				cursorImg.style.top = (y + 10) + 'px';
+			}
+			console.log("x:", x, ", y:", y);
+		} 
+	</script>
 </head>
 
 <body>
+	<div id="mouse" onmousemove="move(event)" >
 
-	<nav id="navigation" class="text-center"> 
-		<a href=#>Resume</a>
-		<a href=#>Projects</a>
-		<a href=#>About Me</a>
-	</nav>
-	
-	<div class="text-center" >
-		<img src="img/Madison Helsel.png" alt="Girl with flowers" width="auto" height="200">	
-		<h1 >Madison Helsel </h1>
+		<nav id="navigation" class="text-center"> 
+			<a href=#>Resume</a>
+			<a href=#>Projects</a>
+			<a href=#>About Me</a>
+		</nav>
 
+		<div class="text-center" >
+			<img src="img/Madison Helsel.png" alt="Girl with flowers" width="auto" height="200">	
+			<h1 >Madison Helsel </h1>
+
+		</div>
 	</div>
 
 </body>
