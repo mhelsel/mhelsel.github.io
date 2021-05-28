@@ -1,0 +1,145 @@
+<!DOCTYPE html> 
+<head>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+	<style type="text/css">		
+		body {
+			background-color: #ffdede;
+		}
+		p {
+			text-align: center;
+			font-family: 'Cinzel', serif;
+			color: white;
+		}
+		#button {
+			background-color: #695734;
+			color: white;
+			text-align: center;
+			border: 5px solid white #f7f7d0;
+			height: 50px;
+			width: 150px;
+		}
+		#reset {
+			visibility: hidden;
+		}
+		.tilt {
+			position: absolute;
+			left: 44%;
+			top: 6%;
+			transform: rotate(27deg);
+		}
+		#champagne {
+				height:500px;
+				width: 125px;
+				position:absolute;
+			}
+		.cork {
+			background-color: #695734;
+			width: 40%;
+			height: 12%;
+			transform: translate(38px, 30px);
+		}	
+		.stem {
+			background-color: #f7f7d0;
+			width: 45%;
+			height: 20%;
+			transform: translate(34px, -640px);
+
+		}
+		.top {
+			background-color: #f7f7d0;
+			width: 100%;
+			height: 25%;
+			border-radius: 50%;
+			transform: translateY(-425px);
+		}
+		.middle {
+			background-color: #f7f7d0;
+			width: 100%;
+			height: 60%;
+			transform: translateY(150px);
+		}
+		.label {
+			background-color: #695734;
+			width: 100%;
+			height: 20%;
+			transform: translateY(-80px);
+
+		}
+		.bottom {
+			background-color: #f7f7d0;
+			width: 100%;
+			height: 20%;
+			border-radius: 40%;
+			transform: translateY(0px);
+		}
+		.shake {
+			animation-name: shake;
+        	animation-timing-function: linear;
+			animation-duration: 1s;
+        	animation-iteration-count: 3;
+		}
+		@keyframes shake {
+			0%   { transform: translateY(0); }
+        	50%  { transform: translateY(-100px); }
+        	100% { transform: translateY(0); }
+		}
+		.pop {
+			animation-name: pop;
+			animation-timing-function: linear;
+			animation-fill-mode: forwards;
+			animation-delay: 3.5s;
+			animation-duration: .6s;
+			animation-iteration-count: 1;
+		}
+		@keyframes pop {
+			0% {transform: translateY(30px, 30px);}
+
+			100% {transform: translate(30px, -200px); }
+		}
+	</style>
+</head>
+<body>
+	<div class="tilt">
+		<div id="champagne">
+			<div class="cork" id="corkPop"></div>
+			<div class="middle"></div>
+			<div class="label"><p>Champagne</p></div>
+			<div class="bottom"></div>
+			<div class="top"></div>
+			<div class="stem"></div>
+		</div> 
+	</div>
+
+	<div id="buttons">
+			<input type="button" id="button" onClick="buttonClick()" value="Pop the Champagne!"></input>
+	</div>
+
+	<script type="text/javascript">
+		function buttonClick() {
+			if (document.getElementById('button').value == "Pop the Champagne!") champagnePop();
+			else reset();
+		}
+		
+		function champagnePop() {
+			const champagne = document.getElementById('champagne');
+			const corkPop = document.getElementById('corkPop');
+			const button = document.getElementById('button');
+			console.log(button.value);
+			champagne.classList.add('shake');
+			corkPop.classList.add('pop');
+			button.value = "reset"; 
+			console.log(button.value);
+		}
+
+		function reset() {
+			const champagne = document.getElementById('champagne');
+			const corkPop = document.getElementById('corkPop');
+			const button = document.getElementById('button');
+			champagne.classList.remove('shake');
+			corkPop.classList.remove('pop');
+			button.value = "Pop the Champagne!";
+		}
+
+	</script>
+</body>
