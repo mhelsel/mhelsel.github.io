@@ -8,7 +8,7 @@
 
 
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=ABeeZee&display=swap" rel="stylesheet">
 
@@ -35,20 +35,23 @@
 </head>
 
 <body>
-	<div id="mouse" onmousemove="move(event)" >
+	<div class="container-fluid" style="padding: 0;" >
+		<div id="mouse" onmousemove="move(event)" >
+			<nav id="navigation" class="navbar navbar-expand-sm justify-content-center navbar-dark"> 
 
-		<nav id="navigation" class="text-center"> 
-			<a href=#>Resume</a>
-			<a href="html/champagnetoast.html">Projects</a>
-			<a href=#>About Me</a>
-		</nav>
+				<ul class="nav navbar-nav">
+					<li class="nav-item active"><a heref="#" class="nav-link">Home</a></li>
+					<li class="nav-item"><a class="nav-link" href="html/resume.html" >Resume</a></li>
+					<li class="nav-item"><a class="nav-link" href="html/projects.html" >Projects</a></li>
+					<li class="nav-item"><a class="nav-link" href="html/aboutme.html" >About Me</a></li>
+				</ul>
+			</nav>
 
-		<div class="text-center" >
-			<img src="img/Madison Helsel.png" alt="Girl with flowers" width="auto" height="200">	
-			<h1 >Madison Helsel </h1>
-
+			<div class="text-center mt-5" >
+				<img src="img/Madison Helsel.png" id="logo" class="col-sm-12" alt="Girl with flowers img-circle" style="width: 30%">	
+				<h1 class="col-sm-12 mt-3">Madison Helsel </h1>
+			</div>
 		</div>
 	</div>
-
 </body>
 </html>
