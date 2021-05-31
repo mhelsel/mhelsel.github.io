@@ -6,20 +6,30 @@ body {
 nav {
 	background-color: rgba(20,17,130,255);
 	
+	font-family: 'ABeeZee', sans-serif;
 }
-	
+
+footer {
+	background-color: rgb(238, 182, 93);
+	color: rgba(20,17,130,255);	
+	font-family: 'ABeeZee', sans-serif;
+	z-index: 1 !important;
+}
+#footer {
+	display: inline-block;
+	font-size: 1.2em;
+}
+i {
+	font-size: 1.5em;
+	color: rgba(20,17,130,255);
+}
+
 a {
 	color: rgba(255,255,255,255);
 }
-a:hover {
-	color: rgba(255,255,255,255);
-	text-decoration: none;
-	font-weight: bold;
 
-}
 h1 {
 	color: rgba(20,17,130,255);
-	font-size: 50px;
 	font-weight: bold;
 }
 
@@ -31,7 +41,7 @@ h1 {
 
 #mouse {
 	width: 100vw;
-	height: 100vh
+	height: 100vh;
 }
 img {
 	border-radius: 50%;
