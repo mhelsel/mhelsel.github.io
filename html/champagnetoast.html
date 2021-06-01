@@ -162,7 +162,7 @@
 	</style>
 </head>
 <body>
-	<canvas id="confettiCanvas"></canvas>
+	<canvas id="confettiCanvas" class="confetti"></canvas>
 	<div class="tilt">
 		<div id="champagne">
 			<div class="cork" id="corkPop"></div>
@@ -177,25 +177,26 @@
 	<input type="button" id="button" onClick="buttonClick()" value="Click to Pop!"></input>
 
 	<script type="text/javascript">
+		const champagne = document.getElementById('champagne');
+		const corkPop = document.getElementById('corkPop');
+		const button = document.getElementById('button');
+
 		function buttonClick() {
-			if (document.getElementById('button').value == "Click to Pop!") champagnePop();
+			if (button.value == "Click to Pop!") champagnePop();
 			else reset();
 		}
 		
 		function champagnePop() {
-			const champagne = document.getElementById('champagne');
-			const corkPop = document.getElementById('corkPop');
-			const button = document.getElementById('button');
-		
 			champagne.classList.add('shake');
 			corkPop.classList.add('pop');
-			button.value = "Click to Reset"; 
-			
+			button.style.opacity = 0;
+			button.disabled = true;
+
 			setTimeout(function() {
 				var myCanvas= document.getElementById(myCanvas);
 				var myConfetti = confetti.create(myCanvas, {
-				resize: true,
-				useWorker: true,
+					resize: true,
+					useWorker: true,
 				});
 				myConfetti({
 				particleCount: 400,
@@ -206,16 +207,17 @@
 					x: 0.5,
 					y: 0.5
 				}
-				});
+				});				
 			}, 3550);
 			
-
+			setTimeout(function() {
+				button.value = "Click to Reset"; 
+				button.style.opacity = 1;
+				button.disabled = false;
+			}, 4000);
 		}
 
 		function reset() {
-			const champagne = document.getElementById('champagne');
-			const corkPop = document.getElementById('corkPop');
-			const button = document.getElementById('button');
 			champagne.classList.remove('shake');
 			corkPop.classList.remove('pop');
 			button.value = "Click to Pop!";
