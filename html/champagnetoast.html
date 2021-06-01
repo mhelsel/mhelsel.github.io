@@ -2,9 +2,13 @@
 <head>
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+	
+	<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+
 	<style type="text/css">		
 		body {
 			background-color: #ffdede;
+			overflow-x: hidden;
 		}
 		p {
 			text-align: center;
@@ -23,18 +27,18 @@
 		#reset {
 			visibility: hidden;
 		}
-		#confetti {
-			position:absolute;
-			pointer-events: none;
-			width: 98vw;
-			height: 98vh;
-		}
+
 		.tilt {
 			position: absolute;
 			left: 44%;
 			top: 6%;
 			transform: rotate(27deg);
 		}
+		#confettiCanvas {
+			width: 0;
+			height: 0;
+		}
+
 		#champagne {
 			height:500px;
 			width: 125px;
@@ -101,9 +105,7 @@
 			animation-iteration-count: 1;
 		}
 		@keyframes pop {
-			0% {transform: translateY(30px, 30px);}
-
-			100% {transform: translate(30px, -500px); }
+			100% {transform: translate(0px, -500px);}
 		}
 		@media (max-height: 440px) {
 			#button {
@@ -143,7 +145,8 @@
 				height: 8vh;
 			}
 			.tilt {
-				left: 55%;
+				transform: rotate(18deg);
+				left: 50%;
 				top: 35%;
 			}	
 			#champagne {
@@ -152,13 +155,14 @@
 			@keyframes shake {
 				0%   { transform: scale(1.75) translateY(0); }
 				50%  { transform: scale(1.75) translateY(-100px); }
-				100% { transform: scale(1.75) translateY(0); }
+				100% { transform: scale(1.75) translateY(0);}
 			}
 		}
+
 	</style>
 </head>
 <body>
-	<div id="confetti"></div>
+	<canvas id="confettiCanvas"></canvas>
 	<div class="tilt">
 		<div id="champagne">
 			<div class="cork" id="corkPop"></div>
@@ -170,9 +174,7 @@
 		</div> 
 	</div>
 
-	<div id="buttons">
-			<input type="button" id="button" onClick="buttonClick()" value="Click to Pop!"></input>
-	</div>
+	<input type="button" id="button" onClick="buttonClick()" value="Click to Pop!"></input>
 
 	<script type="text/javascript">
 		function buttonClick() {
@@ -184,11 +186,29 @@
 			const champagne = document.getElementById('champagne');
 			const corkPop = document.getElementById('corkPop');
 			const button = document.getElementById('button');
-			console.log(button.value);
+		
 			champagne.classList.add('shake');
 			corkPop.classList.add('pop');
 			button.value = "Click to Reset"; 
-			console.log(button.value);
+			
+			setTimeout(function() {
+				var myCanvas= document.getElementById(myCanvas);
+				var myConfetti = confetti.create(myCanvas, {
+				resize: true,
+				useWorker: true,
+				});
+				myConfetti({
+				particleCount: 400,
+				spread: 400,
+				scalar: 1.7,
+				angle: 90,
+				origin: {
+					x: 0.5,
+					y: 0.5
+				}
+				});
+			}, 3550);
+			
 
 		}
 
@@ -200,5 +220,6 @@
 			corkPop.classList.remove('pop');
 			button.value = "Click to Pop!";
 		}
+
 	</script>
 </body>
