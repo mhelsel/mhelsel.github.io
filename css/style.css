@@ -1,8 +1,8 @@
 body {
 	background-color: rgba(238, 182, 93, 0.6);
 	font-family: 'ABeeZee', sans-serif;
-	overflow: hidden;
 }
+
 nav {
 	background-color: rgba(20,17,130,255);
 	
@@ -15,10 +15,12 @@ footer {
 	font-family: 'ABeeZee', sans-serif;
 	z-index: 1 !important;
 }
+
 #footer {
 	display: inline-block;
 	font-size: 1.2em;
 }
+
 i {
 	font-size: 1.5em;
 	color: rgba(20,17,130,255);
@@ -43,7 +45,16 @@ h1 {
 	width: 100vw;
 	height: 100vh;
 }
+
 img {
 	border-radius: 50%;
+}
+
+#bio_pic {
+	border: 3px solid rgb(238, 182, 93);
+}
+
+p {
+	color: rgba(20,17,130,255);
 }
 
