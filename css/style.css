@@ -54,3 +54,34 @@ p {
 	color: rgba(20,17,130,255);
 }
 
+.tabitem {
+	background-color: rgb(238, 182, 93, 0);
+	color: rgba(20,17,130,255);
+	border: none;
+	padding-top: 3vh;
+	padding-bottom: 3vh;
+}
+.tabitem.active {
+	border: none;
+	background-color: rgba(20,17,130,255);
+	color: rgb(238, 182, 93);
+	border-radius: 0%;
+}
+.tabitem:hover:not(.tabitem.active){
+	background-color: rgb(238, 182, 93);
+	color: rgba(20,17,130,255)
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+	color: rgba(20,17,130,255);
+}
+
+ul li::before {
+	content: "\200B";
+  }
+
+h2 {
+	margin-top: 5px;
+}
