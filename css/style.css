@@ -42,11 +42,6 @@ h1 {
 	z-index: 2;
 }
 
-#mouse {
-	width: 100vw;
-	height: 100vh;
-}
-
 img {
 	border-radius: 50%;
 }
