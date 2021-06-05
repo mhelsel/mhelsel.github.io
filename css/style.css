@@ -6,7 +6,6 @@ body {
 
 nav {
 	background-color: rgba(20,17,130,255);
-	
 	font-family: 'ABeeZee', sans-serif;
 }
 
@@ -78,12 +77,10 @@ ul {
 	color: rgba(20,17,130,255);
 }
 
-ul li::before {
-	content: "\200B";
-  }
-
 h2 {
-	margin-top: 5px;
+	margin-top: 10px;
+	margin-bottom: 0;
+	font-weight: bold;
 }
 
 #resume {
