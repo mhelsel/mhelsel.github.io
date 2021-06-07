@@ -30,7 +30,7 @@ a {
 	color: rgba(255,255,255,255);
 }
 
-h1 {
+h1, h2 {
 	color: rgba(20,17,130,255);
 	font-weight: bold;
 }
@@ -47,6 +47,27 @@ img {
 
 #bio_pic {
 	border: 3px solid rgb(238, 182, 93);
+}
+
+summary {
+	font-size: 1.3em;
+	font-weight: bold;
+	color: rgba(20,17,130,255);
+}
+
+details {
+	padding-top: 10px;
+}
+
+.card {
+	background-color: rgb(238, 182, 93, 0);
+	border: none;
+	padding-top: 10px;
+}
+.card img{
+	border-radius: 0;
+	width: 70%;
+	align-self: center;
 }
 
 p {
@@ -84,6 +105,7 @@ h2 {
 }
 
 #resume {
+	display: inline-block;
 	background-color: rgba(20,17,130,255);
 	font-size: 1.2em;
 	border-radius: 15px;
@@ -91,6 +113,17 @@ h2 {
 }
 
 #resume:hover {
+	color: rgba(255,255,255,255);
+	text-decoration: none;
+	font-weight: bolder;
+}
+
+.link {
+	background-color: rgba(20,17,130,255);
+	padding: 0.3em;
+}
+
+.link:hover {
 	color: rgba(255,255,255,255);
 	text-decoration: none;
 	font-weight: bolder;
