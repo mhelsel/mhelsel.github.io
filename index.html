@@ -17,28 +17,34 @@
 
 	<img src="img/cursor_img.png" alt="Cursor" id="cursor" height="35px"/>
 	<script>
-		function move(event) {
-			var x = event.clientX;
-			var y = event.clientY;
-			var cursorImg = document.getElementById("cursor");
+		const cursorImg = document.getElementById("cursor");
 
-			if (y <= 10) {
-				cursorImg.style.display = "none";
-			}
-			else {
-				cursorImg.style.display = "block";
-				cursorImg.style.left = (x + 10) + 'px';
-				cursorImg.style.top = (y + 10) + 'px';
-			}
+		document.addEventListener('mousemove', function(event) {
+			const x = event.clientX;
+			const y = event.clientY;
+
+			cursorImg.style.display = "block";
+			cursorImg.style.left = (x + 10) + 'px';
+			cursorImg.style.top = (y + 10) + 'px';
+			
 			console.log("x:", x, ", y:", y);
-		} 
+		});
+
+		document.addEventListener('mousedown', function() {
+			cursorImg.style.display = "none";
+		});
+
+		document.addEventListener('mouseout', function() {
+			cursorImg.style.display = "none";
+		});
+
 	</script>
 </head>
 
 <body style="overflow: hidden;">
-	<div class="container-fluid d-flex flex-column min-vh-100" id="mouse" onmousemove="move(event)" style="padding: 0;" >
-			<nav id="navigation" class="navbar navbar-expand-sm justify-content-center navbar-dark"> 
+	<div class="container-fluid d-flex flex-column min-vh-100" id="mouse" style="padding: 0;" >
 
+			<nav id="navigation" class="navbar navbar-expand-sm justify-content-center navbar-dark"> 
 				<ul class="nav navbar-nav text-center">
 					<li class="nav-item active"><a heref="#" class="nav-link">Home</a></li>
 					<li class="nav-item"><a class="nav-link" href="html/resume.html" >Resume</a></li>
@@ -48,7 +54,7 @@
 			</nav>
 
 			<div class="text-center mt-5" >
-				<img src="img/Madison Helsel.png" id="logo" class="col-sm-12" alt="Girl with flowers img-circle" style="width: 27%">	
+				<img src="img/Madison Helsel.png" id="logo" class="col-sm-12" alt="Girl with flowers img-circle" style="width: 30vw">	
 				<h1 class="col-sm-12 mt-3">Madison Helsel </h1>
 			</div>
 			
@@ -62,5 +68,8 @@
 			</footer>
 
 	</div>
+
+
+	
 </body>
 </html>
