@@ -47,6 +47,7 @@ img {
 
 #bio_pic {
 	border: 3px solid rgb(238, 182, 93);
+	width: 50%;
 }
 
 summary {
@@ -127,4 +128,34 @@ h2 {
 	color: rgba(255,255,255,255);
 	text-decoration: none;
 	font-weight: bolder;
+}
+#logo {
+	width: 50%;
+}
+
+@media screen and (min-width: 576px) {
+	#logo {
+		width: 45%;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	#logo {
+		width: 40%;
+	}
+}
+
+@media screen and (min-width: 992px) {
+	#logo {
+		width: 30%;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	#bio_pic {
+		width: 30%;
+	}
+	#logo {
+		width: 30%;
+	}
 }
