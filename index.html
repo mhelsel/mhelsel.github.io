@@ -19,29 +19,43 @@
 	<img src="img/cursor_img.png" alt="Cursor" id="cursor" height="35px"/>
 	<script>
 		const cursorImg = document.getElementById("cursor");
-
+		let touch = false;
+		
 		document.addEventListener('mousemove', function(event) {
-			const x = event.clientX;
-			const y = event.clientY;
+			if (touch == true) {
+				console.log(touch);
+				touch = false;
+				return;	
+			}
+			else {
+				const x = event.clientX;
+				const y = event.clientY;
 
-			cursorImg.style.display = "block";
-			cursorImg.style.left = (x + 10) + 'px';
-			cursorImg.style.top = (y + 10) + 'px';
-			
-			console.log("x:", x, ", y:", y);
-		});
-
-		document.addEventListener('mousedown', function() {
-			cursorImg.style.display = "none";
-		});
-
-		document.addEventListener('mouseup', function() {
-			cursorImg.style.display = "none";
+				cursorImg.style.display = "block";
+				cursorImg.style.left = (x + 10) + 'px';
+				cursorImg.style.top = (y + 10) + 'px';
+				
+				console.log("x:", x, ", y:", y);
+			}
 		});
 
 		document.addEventListener('mouseout', function() {
 			cursorImg.style.display = "none";
+			console.log('mouseout');
 		});
+
+		document.addEventListener('touchstart', function(event) {
+			cursorImg.style.display = "none";
+			touch = true;
+			console.log('touchstart');
+		});
+
+		// document.addEventListener('touchend', function(event) {
+		// 	cursorImg.style.display = "none";
+		// 	touch = true;
+		// 	console.log('touchend');
+		// 	console.log(event.type);
+		// });
 
 	</script>
 </head>
