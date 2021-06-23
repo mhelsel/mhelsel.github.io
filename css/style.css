@@ -1,7 +1,7 @@
 body {
 	background-color: rgba(238, 182, 93, 0.6);
 	font-family: 'ABeeZee', sans-serif;
-	/*height: -webkit-fill-available;*/
+	height: 100%;
 }
 
 nav {
@@ -15,6 +15,12 @@ footer {
 	font-family: 'ABeeZee', sans-serif;
 	z-index: 10 !important;
 
+}
+
+.index-footer {
+	width: 100%;
+	position: absolute;
+	bottom: 0;
 }
 
 #footer {
