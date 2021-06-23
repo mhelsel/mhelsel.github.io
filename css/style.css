@@ -13,12 +13,14 @@ footer {
 	background-color: rgb(238, 182, 93);
 	color: rgba(20,17,130,255);	
 	font-family: 'ABeeZee', sans-serif;
-	z-index: 1 !important;
+	z-index: 10 !important;
+
 }
 
 #footer {
 	display: inline-block;
 	font-size: 1.2em;
+
 }
 
 i {
@@ -38,7 +40,7 @@ h1, h2 {
 #cursor {
 	position: absolute;
 	display: none;
-	z-index: 2;
+	z-index: 11;
 }
 
 img {
