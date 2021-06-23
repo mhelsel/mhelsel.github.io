@@ -1,7 +1,7 @@
 body {
 	background-color: rgba(238, 182, 93, 0.6);
 	font-family: 'ABeeZee', sans-serif;
-	height: -webkit-fill-available;
+	/*height: -webkit-fill-available;*/
 }
 
 nav {
